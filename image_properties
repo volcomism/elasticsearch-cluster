@@ -1,0 +1,16 @@
+# File for automated jenkins build
+REPO_NAME=volcomism
+IMAGE_NAME=elasticsearch
+SERVICE_VERSION=es1.7.0
+# STUFF FOR RUN THE IMAGE AT JENKINS BUILD, TO TEST IT.
+ES_ENV=prod
+ES_CONTAINER_NAME=testing-elasticsearch
+ES_ZEN_HOST=true
+ES_MASTER=true
+ES_HEAP_SIZE=1g
+ES_USE_IPV4=true
+ES_HOSTNAME=elasticsearch
+ES_CLUSTERNAME=test-cluster
+ES_PUBLISH_HOST=0.0.0.0
+ES_EXTERNATL_ADDR=es-anfany.com
+ES_RUN_COMMAND=/elasticsearch/bin/elasticsearch

@@ -1,0 +1,20 @@
+path:
+  data: /usr/share/elasticsearch/data/data
+  logs: /usr/share/elasticsearch/data/log
+  plugins: /usr/share/elasticsearch/data/plugins
+  work: /usr/share/elasticsearch/data/work
+
+cluster:
+  name: ${ES_CLUSTERNAME}
+node:
+  name: ${ES_HOSTNAME}
+  master: ${ES_MASTER}
+  data: true
+
+network.publish_host: ${ES_PUBLISH_HOST}
+
+discovery.zen.ping.multicast.enabled: false
+discovery.zen.ping.unicast.hosts: ${ES_ZEN_HOST}
+http.cors.enabled: true
+http.cors.allow-origin: "/.*/"
+http.cors.allow-credentials: true

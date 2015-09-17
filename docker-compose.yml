@@ -1,0 +1,15 @@
+elasticsearch:
+  image: chip/apps-elasticsearch:latest
+  ports:
+    - 9200:9200
+    - 9300:9300
+  environment:
+    - ES_HEAP_SIZE=1g
+    - ES_USE_IPV4=true
+    - ES_PUBLISH_HOST=192.168.150.2
+    - ES_HOSTNAME=local-search
+    - ES_CLUSTERNAME=docker-local-search
+    - ES_MASTER=true
+    - ES_ZEN_HOST=false
+  volumes:
+    - /elasticsearch:/usr/share/elasticsearch/data

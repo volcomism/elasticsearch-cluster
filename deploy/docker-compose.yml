@@ -1,0 +1,16 @@
+elasticsearch:
+  #build: .
+  image: chip/apps-elasticsearch:latest
+  ports:
+    - 9200:9200
+    - 9300:9300
+  environment:
+    - ES_HEAP_SIZE=%ES_HEAP_SIZE%
+    - ES_USE_IPV4=true
+    - ES_HOSTNAME=%ES_HOSTNAME%
+    - ES_CLUSTERNAME=%ES_CLUSTERNAME%
+    - ES_MASTER=%ES_MASTER%
+    - ES_ZEN_HOST=%ES_ZEN_HOST%
+    - ES_PUBLISH_HOST=%ES_PUBLISH_HOST%
+  volumes:
+    - /elasticsearch:/usr/share/elasticsearch/data
