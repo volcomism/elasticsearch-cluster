@@ -1,5 +1,5 @@
 elasticsearch:
-  image: chip/apps-elasticsearch:latest
+  image: volcomism/elasticsearch:latest
   ports:
     - 9200:9200
     - 9300:9300
