@@ -4,7 +4,7 @@
 set -x
 ###
 ## do login, credentials wil be on host via puppet
-docker login -u chipdeploy
+docker login -u jenkins_deploy
 ## pull new images
 docker-compose pull
 ## stop old containers
